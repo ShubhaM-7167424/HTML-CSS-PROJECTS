@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Disney Hotstar</title>
-        <link rel="stylesheet" href="./style.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,43 +12,53 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <main>
-            <!--* sidebar -->
+        <main class="main">
+            <!-- navigation sidebar -->
             <aside class="navigation">
-                <nav class="logo-main">
-                    <img class="disney-logo" src="./images/logo.svg" alt="logo" />
-                </nav>
+                <div class="logo">
+                    <img class="logo-img" src="./images/logo.svg" alt="logo" />
+                </div>
 
-                <nav class="logo-group">
-                    <ul class="logo-lists">
-                        <li class="logo-list">
-                            <img class="logo-img" src="./images/nav-1.png" alt="logo" />
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li class="nav-link">
+                            <img class="nav-1-img" src="./images/nav-1.png" alt="icon" />
                         </li>
-                        <li class="logo-list"><i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li class="logo-list"><i class="fa-solid fa-house"></i></li>
-                        <li class="logo-list"><i class="fa-solid fa-tv"></i></li>
-                        <li class="logo-list"><i class="fa-solid fa-video"></i></li>
-                        <li class="logo-list"><i class="fa-solid fa-baseball"></i></li>
+                        <li class="nav-link">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        <li class="nav-link">
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+                        <li class="nav-link">
+                            <i class="fa-solid fa-tv"></i>
+                        </li>
+                        <li class="nav-link">
+                            <i class="fa-solid fa-video"></i>
+                        </li>
+                        <li class="nav-link">
+                            <i class="fa-solid fa-baseball"></i>
+                        </li>
                     </ul>
                 </nav>
             </aside>
 
-            <!--* main page -->
             <div class="main-page">
-                <!--* fixed banner -->
+                <!-- fixed banner -->
                 <section class="banner">
                     <div class="banner-overlay-1"></div>
                     <div class="banner-overlay-2"></div>
                     <img class="banner-img" src="./images/banner.webp" alt="banner" />
                 </section>
 
-                <!--* main area -->
+                <!-- main area -->
                 <section class="main-area">
-                    <div class="banner-movie-detail">
+                    <section class="banner-movie-detail">
                         <div class="detail">
-                            <img class="title-img" src="./images/banner-title.webp" alt="banner-title" />
+                            <img class="banner-title-img" src="./images/banner-title.webp" alt="banner-title" />
                             <div class="movie-detail">
                                 <p>2023</p>
                                 <p><span class="dot"></span></p>
@@ -58,20 +68,92 @@
                                 <p><span class="dot"></span></p>
                                 <p class="badge">U/A 16+</p>
                             </div>
-
                             <p class="movie-description">
                                 A single misplaced word could mean death, and a new bride finds herself in such a
                                 situation in a conflict-ridden land. Who will save her?
                             </p>
-
                             <p class="tag">Thriller</p>
 
                             <div class="call-to-action">
-                                <button class="cta-big"><i class="fa-solid fa-play play"></i> Watch Now</button>
-                                <button class="cta-small"><i class="fa-solid fa-plus"></i></button>
+                                <button class="cta-big"><i class="fa-solid fa-play"></i> Watch Now</button>
+
+                                <button class="cta-small">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- latest release section -->
+                    <section class="movies-section">
+                        <div class="movies-section-header">
+                            <p class="section-title">Latest Releases</p>
+                            <p class="va">View All <i class="fa-solid fa-angle-right"></i></p>
+                        </div>
+
+                        <div class="movies">
+
+                            <div class="swiper-left">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </div>
+
+                            <div class="swiper-right">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+
+                            <div class="slider">
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-11.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-12.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-13.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-14.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-15.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-16.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-17.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-2.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-3.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-4.webp" alt="movie" />
+                                </div>
+                                <div class="movie">
+                                    <img class="movie-img" src="./images/mov-5.webp" alt="movie" />
+                                </div>
+                                 <div class="movie">
+                                    <img class="movie-img" src="./images/mov-6.webp" alt="movie" />
+                                </div>
+                                 <div class="movie">
+                                    <img class="movie-img" src="./images/mov-7.webp" alt="movie" />
+                                </div>
+                                 <div class="movie">
+                                    <img class="movie-img" src="./images/mov-8.webp" alt="movie" />
+                                </div>
+                                 <div class="movie">
+                                    <img class="movie-img" src="./images/mov-9.webp" alt="movie" />
+                                </div>
+                                 <div class="movie">
+                                    <img class="movie-img" src="./images/mov-10.webp" alt="movie" />
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </div>
         </main>
