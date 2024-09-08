@@ -178,7 +178,11 @@
 }
 .room-image{
         width: 100%;
-
+        cursor: pointer;
+        transition: 0.3s;
+}
+.room-image:hover{
+        transform: scale(1.2);
 }
 .rm{
         height: 106.5%;
@@ -301,4 +305,65 @@
         flex-direction: column;
         align-items: flex-start;
         row-gap: 10px;
+}
+
+/* gallery css */
+.gallery{
+        width: 100%;
+        padding: 50px 15%;
+        background-color: black;
+}
+
+.gall-image{
+        width: 33%;
+        cursor: pointer;
+        opacity: 0.5 !important; 
+        transition: 0.3s;
+}
+.gall-image:hover{
+        opacity: 1 !important;
+}
+
+/* footer css */
+.footer{
+        width: 100%;
+        padding: 20px 15%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+}
+.social-icons{
+       /* background-color: yellow; */
+       width: 30%;
+       padding: 20px;
+       font-size: 35px;
+       display: flex;
+       justify-content: space-evenly;
+       
+}
+.social-icons a{
+        color: black;
+}
+
+
+.footer-right{
+        width: 50%;
+        padding: 20px;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+}
+.footer-right nav{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: underline;
+}
+.footer-right nav a{
+        color: #000;
+        font-weight: 500;
+}
+.footer-right p{
+        text-align: center;
+        color: black;
 }
