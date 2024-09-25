@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <main class="main">
+            <!-- sidebar area -->
+            <div class="sidebar">
+                <div class="logo">
+                    <p>Dashboard</p>
+                </div>
+
+                <ul class="navigation">
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>Customers</li>
+                    <li>Stats</li>
+                    <li>New Clients</li>
+                    <li>Refunds</li>
+                </ul>
+            </div>
+
+            <div class="main-area">
+                <!-- header area -->
+                <header class="header">
+                    <div class="intro">
+                        <h2>Welcome back, Shubham</h2>
+                    </div>
+
+                    <div class="profile">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPmm9IAht3irhhK047dd-atJKP_aBlIdj9hbhrapUF7uRe9op2J-yGuaWPTw&s"
+                            alt="profile"
+                        />
+                        <p>Shubham</p>
+                        <p>Logout</p>
+                    </div>
+                </header>
+
+                <!-- stats area -->
+                <div class="stats">
+                    <div class="stat">
+                        <p><i class="fa-solid fa-dollar-sign"></i> Total Sales</p>
+                        <h2><i class="fa-solid fa-indian-rupee-sign"></i> 20,50000</h2>
+                        <p><i class="fa-solid fa-arrow-trend-up" style="color: green"></i> 20% More Than Last Month</p>
+                    </div>
+                    <div class="stat">
+                        <p><i class="fa-solid fa-dollar-sign"></i> Total Revenue</p>
+                        <h2><i class="fa-solid fa-indian-rupee-sign"></i> 10,5000</h2>
+                        <p><i class="fa-solid fa-arrow-trend-up" style="color: green"></i> 10% More Than Last Month</p>
+                    </div>
+                    <div class="stat">
+                        <p><i class="fa-solid fa-dollar-sign"></i> New Customers Joined</p>
+                        <h2><i class="fa-solid fa-indian-rupee-sign"></i> 3000</h2>
+                        <p><i class="fa-solid fa-arrow-trend-down" style="color: red"></i> 50% Less Than Last Month</p>
+                    </div>
+                    <div class="stat">
+                        <p><i class="fa-solid fa-dollar-sign"></i> Old Clients Funds</p>
+                        <h2><i class="fa-solid fa-indian-rupee-sign"></i> 30,00000</h2>
+                        <p><i class="fa-solid fa-arrow-trend-up" style="color: green"></i> 10% More Than Last Month</p>
+                    </div>
+                </div>
+
+                <!-- chart area -->
+                <div class="charts">
+
+                    <div class="line-chart">
+                        <canvas id="linechart"></canvas>
+                    </div>
+
+                    <div class="polar-area">
+                        <canvas id="polararea"></canvas>
+                    </div>
+
+                    <div class="doughnut-chart">
+                        <canvas id="doughnutchart"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById("linechart");
+            const ctx2 = document.getElementById("doughnutchart");
+            const ctx3 = document.getElementById("polararea");
+
+            new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+                    datasets: [
+                        {
+                            label: "Revenues",
+                            data: [12, 19, 25, 15, 22, 30],
+                            borderWidth: 1,
+                        },
+                        {
+                            label: "Customers",
+                            data: [30, 22, 18, 25, 31, 37],
+                            borderWidth: 1,
+                        },
+                        {
+                            label: "Sales",
+                            data: [27, 19, 30, 35, 26, 11],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+            new Chart(ctx2, {
+                type: "doughnut",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+                    datasets: [
+                        {
+                            label: "Revenues",
+                            data: [12, 19, 25, 15, 22, 30],
+                            borderWidth: 1,
+                        },
+                  
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+            new Chart(ctx3, {
+                 type: 'polarArea',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+                    datasets: [
+                        {
+                            label: "Revenues",
+                            data: [12, 19, 25, 15, 22, 30],
+                            borderWidth: 1,
+                        },
+                  
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
