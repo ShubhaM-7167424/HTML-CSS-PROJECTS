@@ -36,6 +36,7 @@
 .logo p {
     text-transform: uppercase;
 }
+
 .navigation {
     width: 30%;
     height: 60px;
@@ -111,87 +112,88 @@
 
 /* featured css */
 
-.featured {
+.featured{
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 0px; 
     /* background-color: red; */
-    display: flex;  
+    display: flex;
     justify-content: space-between;
 }
-.featured-box-1 {
+.featured-box-1{
     width: 33%;
-    height: 450px;
-    background-color: green;
+    height: 500px;
+    /* background-color: yellow; */
     position: relative;
 }
-.featured-box-2 {
+.overlay{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10%;
+    position: absolute;
+}
+.bg-img{
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+    overflow: hidden;
+}
+.bg-img > img{
+    width: 110%;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.featured-box-2{
     width: 33%;
-    height: 450px;
-    /* background-color: purple; */
+    height: 500px;
+    /* background-color: yellow; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.featured-box-2-box-1 {
+.featured-box-2-box-1{
     width: 100%;
-    height: 220px;
+    height: 245px;
     /* background-color: green; */
     position: relative;
 }
-.featured-box-2-box-2 {
+.featured-box-2-box-2{
     width: 49.5%;
-    height: 220px;
+    height: 245px;
     /* background-color: green; */
     position: relative;
 }
-.featured-box-2-box-3 {
+.featured-box-2-box-3{
     width: 49.5%;
-    height: 220px;
+    height: 245px;
     /* background-color: green; */
     position: relative;
 }
-.featured-box-3 {
+.featured-box-3{
     width: 33%;
-    height: 450px;
-    /* background-color: green; */
+    height: 500px;
+    /* background-color: yellow; */
     position: relative;
 }
-.bg-image {
-    width: 100%;
-    height: 100%;
-    /* background-color: yellow; */
-    overflow: hidden;
-}
-.bg-image > img {
-    width: 100%;
-    transition: 0.3s;
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
-    /* background-color: pink; */
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 4%;
-}   
-.btn-white {
+.btn-white{
     background-color: white;
-    border: 1px solid white;
-    color: #1d1d1d;
-    box-shadow: 0 0 5px lightgray;
+    color: black;
+    border: none;
     z-index: 20;
 }
-
 .featured-box-1:hover img,
 .featured-box-3:hover img,
 .featured-box-2-box-1:hover img,
 .featured-box-2-box-2:hover img,
-.featured-box-2-box-3:hover img {
+.featured-box-2-box-3:hover img
+{
     transform: scale(1.1);
 }
+
 
 /* products css */
 
@@ -204,7 +206,6 @@
     row-gap: 20px;
     align-items: center;
 }
-
 .section-title{
     font-family: futura;
 }
@@ -225,17 +226,6 @@
     font-family: futura;
     font-size: 18px;
 }
-.product:hover .main-image{
-    transform: scale(1.2);
-    opacity: 0;
-}
-.product:hover .effect-image{
-    transform: scale(1);
-    opacity: 1;
-}
-.product:hover .overlay-image{
-    margin-top: 0px;
-}
 .product-image{
     width: 100%;
     height: 270px;
@@ -243,7 +233,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .product-image img{
     width: 100%;
 }
@@ -281,6 +270,17 @@
     display: flex;
     justify-content: space-between;
     font-family: futura;
+}
+.product:hover .main-image{
+    transform: scale(1.2);
+    opacity: 0;
+}
+.product:hover .effect-image{
+    transform: scale(1);
+    opacity: 1;
+}
+.product:hover .overlay-image{
+    margin-top: 0px;
 }
 
 /* categories css */
@@ -396,4 +396,141 @@ input{
     border-radius: 30px;
     border: none;
     border: 1px solid lightgray;
+    text-indent: 15px;
+}
+
+.menu{
+    display: none;
+}
+
+/* css for mobile screens */
+
+@media (max-width:560px) 
+{
+   .header{
+        height: 50px;
+        flex-direction: column;
+        display: block;
+        background-color: white;
+        overflow-y: hidden;
+        transition: 0.3s;
+        position: fixed;
+        top: 0;
+        z-index: 25;
+   }
+   .logo{
+        width: 100%;
+        justify-content: space-between;
+        /* background-color: yellow; */
+   }
+   .menu{
+        display: block;
+   }
+   .navigation{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+   }
+   .navigation > .nav-links{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+        height: auto;
+   }
+   .utils{
+        width: 100%;
+   }
+
+   /* banner */
+
+   .banner{
+        height: 400px;
+        margin-top: 50px;
+   }
+   .slide{
+        padding-left: 0px;
+   }
+   .slide-details{
+        width: 70%;
+   }
+   .slide-details > h1{
+        font-size: 30px;
+   }
+
+   /* featured */
+
+   .featured{
+        flex-direction: column;
+        row-gap: 2px;
+   }
+   .featured-box-1{
+        width: 100%;
+        height: 250px;
+   }
+   .featured-box-2{
+        width: 100%;
+        height: 300px;
+   }
+   .featured-box-2-box-1{
+        height: 147px;
+   }
+   .featured-box-2-box-2, .featured-box-2-box-3{
+        height: 147px;
+   }
+   .featured-box-3{
+        width: 100%;
+        height: 250px;
+   }
+   
+   .featured-box-1 > .bg-img > img,
+   .featured-box-3 > .bg-img > img
+   {
+        margin-top: -120px;
+   }
+   .featured-box-2-box-1 > .bg-img > img,
+   .featured-box-2-box-2 > .bg-img > img,
+   .featured-box-2-box-3 > .bg-img > img{
+        margin-top: -40px;
+   }
+
+   /* products */
+
+   .products{
+        padding: 30px 5%;
+        align-items: flex-start;
+        overflow: scroll;
+   }
+   .products-list{
+       width: 270%;
+   }
+
+   .categories{
+        padding: 30px 5%;
+        flex-direction: column;
+   }
+   .category{
+        width: 100%;
+   }
+
+   .insta{
+        padding: 30px 5%;
+   }
+   .posts{
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 15px;
+   }
+   .post-image{
+        width: 48%;
+   }
+
+   .footer{
+        padding: 30px 5%;
+        flex-direction: column;
+        row-gap: 30px;
+   }
+   .footer-section{
+        width: 100%;
+   }
+
 }
